@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
+    "dev": "next dev",
+    "lint": "eslint . --max-warnings 0",
     "start": "next start",
-    "lint": "eslint . --max-warnings 0"
+    "test": "jest"
   },
   "dependencies": {
     "next": "9.5.0",
