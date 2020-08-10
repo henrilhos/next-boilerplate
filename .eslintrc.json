@@ -6,13 +6,15 @@
     "node": true
   },
   "settings": {
-    "react": { "version": "detect" }
+    "react": { "version": "detect" },
+    "import/internal-regex": "^components|^styles"
   },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:jsx-a11y/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -22,9 +24,31 @@
     "ecmaVersion": 11,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "react-hooks"],
+  "plugins": [
+    "@typescript-eslint",
+    "import",
+    "jest",
+    "prettier",
+    "react-hooks",
+    "react"
+  ],
   "rules": {
     "@typescript-eslint/explicit-module-boundary-types": "off",
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "caseInsensitive": true,
+          "order": "asc"
+        },
+        "groups": [
+          "builtin",
+          "external",
+          ["internal", "parent", "sibling", "index"]
+        ],
+        "newlines-between": "always"
+      }
+    ],
     "react-hooks/exhaustive-deps": "warn",
     "react-hooks/rules-of-hooks": "error",
     "react/prop-types": "off",
