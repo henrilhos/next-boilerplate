@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -s ./public",
     "build": "next build",
     "dev": "next dev",
     "lint": "eslint . --max-warnings 0",
