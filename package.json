@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build-storybook": "build-storybook -s ./public",
-    "build": "next build",
     "dev": "next dev",
-    "lint": "eslint . --max-warnings 0",
+    "build": "next build",
     "start": "next start",
-    "storybook": "start-storybook -s ./public -p 6006",
+    "lint": "eslint src --max-warnings=0",
+    "test": "jest",
     "test:watch": "yarn test --watch",
-    "test": "jest"
+    "generate": "yarn plop --plopfile ./generators/plopfile.js",
+    "storybook": "start-storybook -s ./public -p 6006",
+    "build:storybook": "build-storybook -s ./public"
   },
   "dependencies": {
     "next": "9.5.2",
