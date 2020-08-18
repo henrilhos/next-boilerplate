@@ -1,4 +1,4 @@
-import * as S from './styles'
+import * as S from './Main.styles'
 
 const Main = ({
   title = 'React Avançado',
@@ -18,4 +18,4 @@ const Main = ({
   </S.Wrapper>
 )
 
-export default Main
+export { Main }
